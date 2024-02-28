@@ -45,7 +45,7 @@ for _ in range(100):
         'NULL',  # Assuming 'gender' is optional
         'NULL',  # Assuming 'country' is optional
         'NULL',  # Assuming 'avatar' is optional
-        'NULL',  # Set 'active' to 1
+        '1',  # Set 'active' to 1
         'NULL',  # Assuming 'login_attempt' is set to 0 by default
         'NULL',  # Assuming 'last_login' is optional
         'CURRENT_TIMESTAMP',  # Set 'created_at' to the current timestamp
