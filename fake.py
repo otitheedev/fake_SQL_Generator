@@ -7,7 +7,7 @@ fake = Faker()
 
 # Generate 100 random user records
 user_records = []
-for _ in range(5):
+for _ in range(100):
     # Generate a username that starts with '018', '017', or '015'
     username_prefix = random.choice(['018', '017', '015'])
     username = f"{username_prefix}{fake.random_number(digits=8)}"
@@ -16,7 +16,7 @@ for _ in range(5):
 
     user_record = (
         'NULL',  # Assuming 'id' is an auto-incremented field
-        'NULL',  # Assuming 'group_id' is optional
+        '5',  # Assuming 'group_id' is optional
         f"'{username}'",  # Generate a username
         "'$2a$12$8WEJqIe/yOgbmn0EKTljmOnP54ZCaru0ftPiYmG8KOEE0lNUxwHSe'",  # Set all passwords to '123456'
         f"'{email}'",  # Assuming 'email' is optional
@@ -25,17 +25,18 @@ for _ in range(5):
         'NULL',  # Assuming 'nid' is optional
         'NULL',  # Assuming 'nid_front_image' is optional
         'NULL',  # Assuming 'nid_back_image' is optional
-        'NULL',  # Assuming 'referer' is optional
+        "'01878578504'",  # Assuming 'referer' is optional
         f"'{fake.date_of_birth()}'",  # Generate a random date of birth
         'NULL',  # Assuming 'address_1' is optional
         'NULL',  # Assuming 'state' is optional
         'NULL',  # Assuming 'city' is optional
-        f'{random.randint(0, 1)}',  # Generate a random value for 'is_ref' (0 or 1)
+        #f'{random.randint(0, 1)}',  # Generate a random value for 'is_ref' (0 or 1)
+        '0',
         'NULL',  # Assuming 'gender' is optional
         'NULL',  # Assuming 'country' is optional
         'NULL',  # Assuming 'avatar' is optional
-        '1',  # Set 'active' to 1
-        '0',  # Assuming 'login_attempt' is set to 0 by default
+        'NULL',  # Set 'active' to 1
+        'NULL',  # Assuming 'login_attempt' is set to 0 by default
         'NULL',  # Assuming 'last_login' is optional
         'CURRENT_TIMESTAMP',  # Set 'created_at' to the current timestamp
         'NULL',  # Assuming 'updated_at' is optional
